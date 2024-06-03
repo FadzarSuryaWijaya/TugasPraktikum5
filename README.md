@@ -111,6 +111,7 @@ FROM MataKuliah
 LEFT JOIN Jadwal ON MataKuliah.kd_mk = Jadwal.kd_mk
 LEFT JOIN Dosen ON Jadwal.kd_ds = Dosen.kd_ds;
 `````
+
 Output:
 ![alt text](Picture/LL2.png)
 
