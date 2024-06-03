@@ -104,33 +104,33 @@ JOIN Dosen ON Mahasiswa.kd_ds = Dosen.kd_ds;
 Output :
 ![alt text](Picture/LL1.png)
 
-- JOIN table JadwalMengajar, Dosen, dan Matakuliah
+- Lakukan JOIN tabel Matakuliah dan Dosen.
 `````
 SELECT MataKuliah.kd_mk, MataKuliah.nama AS nama_matakuliah, MataKuliah.sks, Dosen.nama AS nama_dosen
 FROM MataKuliah
 LEFT JOIN Jadwal ON MataKuliah.kd_mk = Jadwal.kd_mk
 LEFT JOIN Dosen ON Jadwal.kd_ds = Dosen.kd_ds;
 `````
-
 Output:
 ![alt text](Picture/LL2.png)
 
 - JOIN table JadwalMengajar, Dosen, dan Matakuliah
 `````
-SELECT Matakuliah.kd_mk, Matakuliah.nama, Matakuliah.sks, Dosen.nama AS "Dosen Pengampu"
-FROM JadwalMengajar
-LEFT JOIN Matakuliah ON JadwalMengajar.kd_mk = Matakuliah.kd_mk
-LEFT JOIN Dosen ON JadwalMengajar.kd_ds = Dosen.kd_ds;
+SELECT Jadwal.kd_mk, MataKuliah.nama AS nama_matakuliah, Dosen.nama AS nama_dosen, Jadwal.hari, Jadwal.jam, Jadwal.ruang
+FROM Jadwal
+JOIN Dosen ON Jadwal.kd_ds = Dosen.kd_ds
+JOIN MataKuliah ON Jadwal.kd_mk = MataKuliah.kd_mk;
 `````
 Output :
 ![alt text](Picture/LL3.png)
 
 - JOIN tabel KRSMahasiswa, Mahasiswa, Matakuliah, dan Dosen
 `````
-SELECT Jadwal.kd_mk, MataKuliah.nama AS nama_matakuliah, Dosen.nama AS nama_dosen, Jadwal.hari, Jadwal.jam, Jadwal.ruang
-FROM Jadwal
-JOIN Dosen ON Jadwal.kd_ds = Dosen.kd_ds
-JOIN MataKuliah ON Jadwal.kd_mk = MataKuliah.kd_mk;
+SELECT KRS.nim, Mahasiswa.nama AS nama_mahasiswa, Mahasiswa.jk AS jenis_kelamin, Mahasiswa.tgl_lahir, MataKuliah.nama AS nama_matakuliah, Dosen.nama AS nama_dosen, KRS.semester, KRS.nilai
+FROM KRS
+JOIN Mahasiswa ON KRS.nim = Mahasiswa.nim
+JOIN MataKuliah ON KRS.kd_mk = MataKuliah.kd_mk
+JOIN Dosen ON KRS.kd_ds = Dosen.kd_ds;
 `````
 Output :
 ![alt text](Picture/LL4.png)
