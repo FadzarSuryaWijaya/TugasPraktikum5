@@ -9,7 +9,7 @@
 
 # Soal Latihan Praktikum 
 
-![alt text](Picture/1.png)
+![alt text](Picture/1.PNG)
 
 ```
 -- Membuat Tabel Mahasiswa
@@ -27,7 +27,7 @@ CREATE TABLE Mahasiswa (
 );
 ```
 
-![alt text](Picture/2.png)
+![alt text](Picture/2.PNG)
 
 ```sql
 -- Membuat Tabel Dosen
@@ -37,7 +37,7 @@ CREATE TABLE Dosen (
 );
 ```
 
-![alt text](Picture/3.png)
+![alt text](Picture/3.PNG)
 
 ```
 -- Membuat Tabel MataKuliah
@@ -49,7 +49,7 @@ CREATE TABLE MataKuliah (
 
 ```
 
-![alt text](Picture/4.png)
+![alt text](Picture/4.PNG)
 
 ```
 -- Membuat Tabel Jadwal
@@ -65,7 +65,7 @@ CREATE TABLE Jadwal (
 );
 ```
 
-![alt text](Picture/5.png)
+![alt text](Picture/5.PNG)
 
 ```
 -- Membuat Tabel KRS
